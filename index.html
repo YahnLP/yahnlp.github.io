@@ -4,87 +4,74 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Portail BTS SIO SISR</title>
-  <meta name="description" content="Portail BTS SIO SISR – accès rapide aux blocs de formation." />
+  <meta name="description" content="Portail BTS SIO SISR – accès aux blocs de formation." />
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-  <!-- Fond décoratif -->
-  <div class="bg" aria-hidden="true"></div>
 
-  <header class="header">
-    <div class="brand">
-      <div class="logo" aria-hidden="true">
-        <!-- petit pictogramme "réseau" en SVG (sans bibliothèque) -->
-        <svg viewBox="0 0 24 24" width="22" height="22" fill="none">
-          <path d="M12 3.5a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z" stroke="currentColor" stroke-width="1.6"/>
-          <path d="M4.5 17a2.6 2.6 0 1 0 0 5.2A2.6 2.6 0 0 0 4.5 17Zm15 0a2.6 2.6 0 1 0 0 5.2A2.6 2.6 0 0 0 19.5 17Z" stroke="currentColor" stroke-width="1.6"/>
-          <path d="M12 9.8v2.3M12 12.1H6.2M12 12.1h5.8M6.2 12.1 4.7 17M17.8 12.1 19.3 17" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
-        </svg>
-      </div>
+<div class="bg"></div>
 
-      <div class="titles">
-        <h1>Portail BTS SIO – Option SISR</h1>
-        <p>Accès rapide aux blocs de cours</p>
-      </div>
-    </div>
-  </header>
+<header class="header">
+  <h1>BTS SIO – Option SISR</h1>
+  <p>Infrastructure • Réseaux • Cybersécurité • Algorithmique • CEJMA</p>
+</header>
 
-  <main class="container">
-    <section class="grid" aria-label="Blocs BTS SIO SISR">
-      
-      <!-- Bloc 1 -->
-      <a class="card card--blue" href="https://yahnlp.github.io/bts1-sio-sisr-bloc1/" target="_self" rel="noopener">
-        <div class="card__top">
-          <span class="tag">BLOC 1</span>
-          <span class="chip">Support & services</span>
-        </div>
+<main class="container">
 
-        <h2>Support et Services</h2>
+  <section class="grid">
 
-        <p>
-          Assistance utilisateurs, gestion des incidents, documentation, qualité de service,
-          outils et méthodologies (ITIL, ticketing, procédures).
-        </p>
+    <!-- BLOC 1 -->
+    <a class="card blue" href="https://yahnlp.github.io/bts1-sio-sisr-bloc1/">
+      <span class="tag">BLOC 1</span>
+      <h2>Support & Services</h2>
+      <p>Gestion des incidents, assistance, déploiement de services et support utilisateurs.</p>
+      <span class="arrow">→</span>
+    </a>
 
-        <div class="card__bottom">
-          <span class="cta">Ouvrir le bloc</span>
-          <span class="arrow" aria-hidden="true">→</span>
-        </div>
-      </a>
+    <!-- BLOC 2 -->
+    <a class="card violet" href="https://yahnlp.github.io/bts1-sio-sisr-bloc2/">
+      <span class="tag">BLOC 2</span>
+      <h2>Infrastructure, Systèmes & Réseaux</h2>
+      <p>Architecture réseau, serveurs, services d’infrastructure et administration système.</p>
+      <span class="arrow">→</span>
+    </a>
 
-      <!-- Bloc 2 -->
-      <a class="card card--violet" href="https://yahnlp.github.io/bts1-sio-sisr-bloc2/" target="_self" rel="noopener">
-        <div class="card__top">
-          <span class="tag">BLOC 2</span>
-          <span class="chip">Infra • systèmes • réseaux</span>
-        </div>
+    <!-- BLOC 3 -->
+    <a class="card red" href="https://yahnlp.github.io/bts1-sio-sisr-bloc3/">
+      <span class="tag">BLOC 3</span>
+      <h2>Cybersécurité</h2>
+      <p>Protection des systèmes, analyse des menaces, pare-feu, VPN et sécurisation des infrastructures.</p>
+      <span class="arrow">→</span>
+    </a>
 
-        <h2>Infrastructure, Systèmes et Réseaux</h2>
+    <!-- MATHS -->
+    <a class="card green disabled" href="#">
+      <span class="tag">MATHS</span>
+      <h2>Maths & Algorithmique</h2>
+      <p>Numération, subnetting, logique, graphes et bases de l’algorithmique.</p>
+      <span class="soon">Bientôt disponible</span>
+    </a>
 
-        <p>
-          Architecture réseau, services (DHCP/DNS), Linux/Windows Server,
-          sécurisation, virtualisation, supervision et déploiements.
-        </p>
+    <!-- CEJMA -->
+    <a class="card orange disabled" href="#">
+      <span class="tag">CEJMA</span>
+      <h2>Culture Éco, Juridique & Managériale</h2>
+      <p>Environnement juridique du numérique, RGPD, management et gouvernance IT.</p>
+      <span class="soon">Bientôt disponible</span>
+    </a>
 
-        <div class="card__bottom">
-          <span class="cta">Ouvrir le bloc</span>
-          <span class="arrow" aria-hidden="true">→</span>
-        </div>
-      </a>
+  </section>
 
-    </section>
+  <footer>
+    © <span id="year"></span> – Portail BTS SIO SISR
+  </footer>
 
-    <footer class="footer">
-      <span>© <span id="year"></span> – Portail BTS SIO SISR - Yahn LE PRETTRE</span>
-      <span class="sep">•</span>
-      <span class="hint">Responsive • Accessible • HTML/CSS</span>
-    </footer>
-  </main>
+</main>
 
-  <script>
-    // année automatique (petit plus propre)
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+<script>
+document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
 </body>
 </html>
