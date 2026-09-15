@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Portail BTS SIO SISR</title>
-  <meta name="description" content="Portail BTS SIO SISR – accès rapide aux blocs de formation." />
+  <title>Portail Pédagogique — Yahn LE PRETTRE</title>
+  <meta name="description" content="Portail pédagogique – accès rapide au BTS SIO option SISR et au BAC PRO CIEL." />
   <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -12,133 +12,339 @@
   <!-- Fond décoratif -->
   <div class="bg" aria-hidden="true"></div>
 
-  <header class="header">
-    <div class="brand">
-      <div class="logo" aria-hidden="true">
-        <!-- pictogramme "réseau" -->
-        <svg viewBox="0 0 24 24" width="22" height="22" fill="none">
-          <path d="M12 3.5a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z" stroke="currentColor" stroke-width="1.6"/>
-          <path d="M4.5 17a2.6 2.6 0 1 0 0 5.2A2.6 2.6 0 0 0 4.5 17Zm15 0a2.6 2.6 0 1 0 0 5.2A2.6 2.6 0 0 0 19.5 17Z" stroke="currentColor" stroke-width="1.6"/>
-          <path d="M12 9.8v2.3M12 12.1H6.2M12 12.1h5.8M6.2 12.1 4.7 17M17.8 12.1 19.3 17" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
-        </svg>
+  <!-- =============================== -->
+  <!--  VUE 1 : ACCUEIL (choix filière) -->
+  <!-- =============================== -->
+  <div class="view" id="view-home">
+    <header class="header">
+      <div class="brand">
+        <div class="logo" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none">
+            <path d="M12 3 2 8l10 5 10-5-10-5Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+            <path d="M6 10.5v5c0 1.5 2.7 3 6 3s6-1.5 6-3v-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M20 9v6.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="titles">
+          <h1>Portail Pédagogique</h1>
+          <p>Choisissez votre formation</p>
+        </div>
       </div>
+    </header>
 
-      <div class="titles">
-        <h1>Portail BTS SIO – Option SISR</h1>
-        <p>Accès rapide aux blocs de cours</p>
+    <main class="container">
+      <section class="grid grid--2" aria-label="Choix de la formation">
+
+        <!-- BTS SIO -->
+        <a class="card card--blue" href="#bts" data-view-link>
+          <div class="card__top">
+            <span class="tag">BTS SIO</span>
+            <span class="chip">Option SISR</span>
+          </div>
+          <h2>BTS SIO — Option SISR</h2>
+          <p>
+            5 blocs de compétences : Support &amp; Services, Infrastructure Systèmes et Réseaux,
+            Cybersécurité, Maths &amp; Algorithmique, CEJMA.
+          </p>
+          <div class="card__bottom">
+            <span class="cta">Découvrir les blocs</span>
+            <span class="arrow" aria-hidden="true">→</span>
+          </div>
+        </a>
+
+        <!-- BAC PRO CIEL -->
+        <a class="card card--orange" href="#ciel" data-view-link>
+          <div class="card__top">
+            <span class="tag">BAC PRO</span>
+            <span class="chip">CIEL</span>
+          </div>
+          <h2>BAC PRO CIEL</h2>
+          <p>
+            Cybersécurité, Informatique et réseaux, Électronique — parcours complet
+            en 3 années (module E31, Réseaux informatiques).
+          </p>
+          <div class="card__bottom">
+            <span class="cta">Choisir l’année</span>
+            <span class="arrow" aria-hidden="true">→</span>
+          </div>
+        </a>
+
+      </section>
+
+      <footer class="footer">
+        <span>© <span class="year"></span> – Portail Pédagogique</span>
+        <span class="sep">•</span>
+        <span class="hint">Yahn LE PRETTRE</span>
+      </footer>
+    </main>
+  </div>
+
+  <!-- =============================== -->
+  <!--  VUE 2 : BTS SIO (5 blocs)      -->
+  <!-- =============================== -->
+  <div class="view" id="view-bts" hidden>
+    <header class="header">
+      <a class="back" href="#home" data-view-link>
+        <span class="back__arrow" aria-hidden="true">←</span> Retour à l’accueil
+      </a>
+      <div class="brand">
+        <div class="logo" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none">
+            <path d="M12 3.5a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z" stroke="currentColor" stroke-width="1.6"/>
+            <path d="M4.5 17a2.6 2.6 0 1 0 0 5.2A2.6 2.6 0 0 0 4.5 17Zm15 0a2.6 2.6 0 1 0 0 5.2A2.6 2.6 0 0 0 19.5 17Z" stroke="currentColor" stroke-width="1.6"/>
+            <path d="M12 9.8v2.3M12 12.1H6.2M12 12.1h5.8M6.2 12.1 4.7 17M17.8 12.1 19.3 17" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="titles">
+          <h1>Portail BTS SIO – Option SISR</h1>
+          <p>Accès rapide aux blocs de cours</p>
+        </div>
       </div>
-    </div>
-  </header>
+    </header>
 
-  <main class="container">
-    <section class="grid" aria-label="Blocs BTS SIO SISR">
+    <main class="container">
+      <section class="grid grid--2" aria-label="Blocs BTS SIO SISR">
 
-      <!-- Bloc 1 -->
-      <a class="card card--blue"
-         href="https://yahnlp.github.io/bts1-sio-sisr-bloc1/"
-         target="_self" rel="noopener">
-        <div class="card__top">
-          <span class="tag">BLOC 1</span>
-          <span class="chip">Support & services</span>
-        </div>
-        <h2>Support et Services</h2>
-        <p>
-          Assistance utilisateurs, gestion des incidents, documentation, qualité de service,
-          outils et méthodologies (ITIL, ticketing, procédures).
-        </p>
-        <div class="card__bottom">
-          <span class="cta">Ouvrir le bloc</span>
-          <span class="arrow" aria-hidden="true">→</span>
-        </div>
+        <!-- Bloc 1 -->
+        <a class="card card--blue"
+           href="https://yahnlp.github.io/bts1-sio-sisr-bloc1/"
+           target="_self" rel="noopener">
+          <div class="card__top">
+            <span class="tag">BLOC 1</span>
+            <span class="chip">Support &amp; services</span>
+          </div>
+          <h2>Support et Services</h2>
+          <p>
+            Assistance utilisateurs, gestion des incidents, documentation, qualité de service,
+            outils et méthodologies (ITIL, ticketing, procédures).
+          </p>
+          <div class="card__bottom">
+            <span class="cta">Ouvrir le bloc</span>
+            <span class="arrow" aria-hidden="true">→</span>
+          </div>
+        </a>
+
+        <!-- Bloc 2 -->
+        <a class="card card--violet"
+           href="https://yahnlp.github.io/bts1-sio-sisr-bloc2/"
+           target="_self" rel="noopener">
+          <div class="card__top">
+            <span class="tag">BLOC 2</span>
+            <span class="chip">Infra • systèmes • réseaux</span>
+          </div>
+          <h2>Infrastructure, Systèmes et Réseaux</h2>
+          <p>
+            Architecture réseau, services (DHCP/DNS), Linux/Windows Server,
+            sécurisation, virtualisation, supervision et déploiements.
+          </p>
+          <div class="card__bottom">
+            <span class="cta">Ouvrir le bloc</span>
+            <span class="arrow" aria-hidden="true">→</span>
+          </div>
+        </a>
+
+        <!-- Bloc 3 -->
+        <a class="card card--red"
+           href="https://yahnlp.github.io/bts1-sio-sisr-bloc3/"
+           target="_self" rel="noopener">
+          <div class="card__top">
+            <span class="tag">BLOC 3</span>
+            <span class="chip">Cybersécurité</span>
+          </div>
+          <h2>Cybersécurité</h2>
+          <p>
+            Menaces, vulnérabilités, sécurisation des systèmes, pare-feu, VPN,
+            bonnes pratiques, analyse et renforcement d’une infrastructure.
+          </p>
+          <div class="card__bottom">
+            <span class="cta">Ouvrir le bloc</span>
+            <span class="arrow" aria-hidden="true">→</span>
+          </div>
+        </a>
+
+        <!-- Maths & Algorithmique -->
+        <a class="card card--green"
+           href="https://yahnlp.github.io/bts1-sio-sisr-math_algo/"
+           target="_self" rel="noopener">
+          <div class="card__top">
+            <span class="tag">MATHS</span>
+            <span class="chip">Mathématiques pour l’informatique</span>
+          </div>
+          <h2>Maths &amp; Algorithmique</h2>
+          <p>
+            Numération, logique, subnetting, structures, complexité, graphes…
+            entraînement et méthodes pour réussir.
+          </p>
+          <div class="card__bottom">
+            <span class="cta">Ouvrir le bloc</span>
+            <span class="arrow" aria-hidden="true">→</span>
+          </div>
+        </a>
+
+        <!-- CEJMA -->
+        <a class="card card--orange"
+           href="https://yahnlp.github.io/bts1-sio-sisr-cejma/"
+           target="_self" rel="noopener">
+          <div class="card__top">
+            <span class="tag">CEJMA</span>
+            <span class="chip">Éco • Juridique • Management</span>
+          </div>
+          <h2>CEJMA</h2>
+          <p>
+            Droit du numérique, RGPD, organisation, contrats, management et
+            environnement économique des services IT.
+          </p>
+          <div class="card__bottom">
+            <span class="cta">Ouvrir le bloc</span>
+            <span class="arrow" aria-hidden="true">→</span>
+          </div>
+        </a>
+
+      </section>
+
+      <footer class="footer">
+        <span>© <span class="year"></span> – Portail BTS SIO SISR</span>
+        <span class="sep">•</span>
+        <span class="hint">Yahn LE PRETTRE</span>
+      </footer>
+    </main>
+  </div>
+
+  <!-- =============================== -->
+  <!--  VUE 3 : BAC PRO CIEL (années)  -->
+  <!-- =============================== -->
+  <div class="view" id="view-ciel" hidden>
+    <header class="header">
+      <a class="back" href="#home" data-view-link>
+        <span class="back__arrow" aria-hidden="true">←</span> Retour à l’accueil
       </a>
+      <div class="brand">
+        <div class="logo" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none">
+            <path d="M12 3 2 8l10 5 10-5-10-5Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+            <path d="M6 10.5v5c0 1.5 2.7 3 6 3s6-1.5 6-3v-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M20 9v6.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="titles">
+          <h1>BAC PRO CIEL</h1>
+          <p>Choisissez votre année de formation</p>
+        </div>
+      </div>
+    </header>
 
-      <!-- Bloc 2 -->
-      <a class="card card--violet"
-         href="https://yahnlp.github.io/bts1-sio-sisr-bloc2/"
-         target="_self" rel="noopener">
-        <div class="card__top">
-          <span class="tag">BLOC 2</span>
-          <span class="chip">Infra • systèmes • réseaux</span>
-        </div>
-        <h2>Infrastructure, Systèmes et Réseaux</h2>
-        <p>
-          Architecture réseau, services (DHCP/DNS), Linux/Windows Server,
-          sécurisation, virtualisation, supervision et déploiements.
-        </p>
-        <div class="card__bottom">
-          <span class="cta">Ouvrir le bloc</span>
-          <span class="arrow" aria-hidden="true">→</span>
-        </div>
-      </a>
+    <main class="container">
+      <section class="grid grid--3" aria-label="Années BAC PRO CIEL">
 
-      <!-- Bloc 3 -->
-      <a class="card card--red"
-         href="https://yahnlp.github.io/bts1-sio-sisr-bloc3/"
-         target="_self" rel="noopener">
-        <div class="card__top">
-          <span class="tag">BLOC 3</span>
-          <span class="chip">Cybersécurité</span>
-        </div>
-        <h2>Cybersécurité</h2>
-        <p>
-          Menaces, vulnérabilités, sécurisation des systèmes, pare-feu, VPN,
-          bonnes pratiques, analyse et renforcement d’une infrastructure.
-        </p>
-        <div class="card__bottom">
-          <span class="cta">Ouvrir le bloc</span>
-          <span class="arrow" aria-hidden="true">→</span>
-        </div>
-      </a>
+        <!-- Année 1 -->
+        <a class="card card--blue"
+           href="https://yahnlp.github.io/ressources-pedagogiques/E31/Annee-1/Semaine-01/"
+           target="_self" rel="noopener">
+          <div class="card__top">
+            <span class="tag">ANNÉE 1</span>
+            <span class="chip">Fondamentaux</span>
+          </div>
+          <h2>Année 1</h2>
+          <p>
+            Bases des réseaux : câblage RJ45, modèle OSI, adressage IP,
+            premiers protocoles — de la découverte à l’autonomie.
+          </p>
+          <div class="card__bottom">
+            <span class="cta">Ouvrir l’année 1</span>
+            <span class="arrow" aria-hidden="true">→</span>
+          </div>
+        </a>
 
-      <!-- Maths & Algorithmique (désactivé tant que lien inconnu) -->
-      <a class="card card--green"
-         href="https://yahnlp.github.io/bts1-sio-sisr-math_algo/"
-         target="_self" rel="noopener">
-        <div class="card__top">
-          <span class="tag">MATHS</span>
-          <span class="chip">Mathématiques pour l’informatique </span>
-        </div>
-        <h2>Maths & Algorithmique</h2>
-        <p>
-          Numération, logique, subnetting, structures, complexité, graphes…
-          entraînement et méthodes pour réussir.
-        </p>
-        <div class="card__bottom">
-          <span class="cta">Ouvrir le bloc</span>
-          <span class="lock" aria-hidden="true">→</span>
-        </div>
-      </a>
+        <!-- Année 2 -->
+        <a class="card card--violet"
+           href="https://yahnlp.github.io/ressources-pedagogiques/E31/Annee-2/Semaine-01/"
+           target="_self" rel="noopener">
+          <div class="card__top">
+            <span class="tag">ANNÉE 2</span>
+            <span class="chip">Approfondissement</span>
+          </div>
+          <h2>Année 2</h2>
+          <p>
+            Routage, VLAN, ACL, DHCP/DNS, HSRP, supervision, IPv6, QoS,
+            Wi-Fi 802.1X — vers des réseaux d’entreprise complets.
+          </p>
+          <div class="card__bottom">
+            <span class="cta">Ouvrir l’année 2</span>
+            <span class="arrow" aria-hidden="true">→</span>
+          </div>
+        </a>
 
-      <!-- CEJMA (désactivé tant que lien inconnu) -->
-      <a class="card card--orange"
-         href="https://yahnlp.github.io/bts1-sio-sisr-cejma/"
-         target="_self" rel="noopener">
-        <div class="card__top">
-          <span class="tag">CEJMA</span>
-          <span class="chip">Éco • Juridique • Management</span>
-        </div>
-        <h2>CEJMA</h2>
-        <p>
-          Droit du numérique, RGPD, organisation, contrats, management et
-          environnement économique des services IT.
-        </p>
-        <div class="card__bottom">
-          <span class="cta">Ouvrir le bloc</span>
-          <span class="lock" aria-hidden="true">→</span>
-        </div>
-      </a>
+        <!-- Année 3 -->
+        <a class="card card--red"
+           href="https://yahnlp.github.io/ressources-pedagogiques/E31/Annee-3/Semaine-01/"
+           target="_self" rel="noopener">
+          <div class="card__top">
+            <span class="tag">ANNÉE 3</span>
+            <span class="chip">Expertise</span>
+          </div>
+          <h2>Année 3</h2>
+          <p>
+            OSPFv3, BGP, SDN, cloud (VPC AWS), Wi-Fi avancé, SD-WAN, DMVPN,
+            automatisation (Ansible/Netmiko).
+          </p>
+          <div class="card__bottom">
+            <span class="cta">Ouvrir l’année 3</span>
+            <span class="arrow" aria-hidden="true">→</span>
+          </div>
+        </a>
 
-    </section>
+      </section>
 
-    <footer class="footer">
-      <span>© <span id="year"></span> – Portail BTS SIO SISR</span>
-      <span class="sep">•</span>
-      <span class="hint">Yahn LE PRETTRE</span>
-    </footer>
-  </main>
+      <p class="more-link">
+        <a href="https://yahnlp.github.io/ressources-pedagogiques/" target="_self" rel="noopener">
+          Voir le site complet (sommaire détaillé, recherche) →
+        </a>
+      </p>
+
+      <footer class="footer">
+        <span>© <span class="year"></span> – Ressources pédagogiques BAC PRO CIEL</span>
+        <span class="sep">•</span>
+        <span class="hint">Yahn LE PRETTRE</span>
+      </footer>
+    </main>
+  </div>
 
   <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
+    (function () {
+      var VIEWS = { home: "view-home", bts: "view-bts", ciel: "view-ciel" };
+
+      function currentKey() {
+        var h = (location.hash || "#home").replace("#", "");
+        return VIEWS[h] ? h : "home";
+      }
+
+      function replay(el) {
+        el.style.animation = "none";
+        // force reflow so the animation restarts
+        void el.offsetHeight;
+        el.style.animation = "";
+      }
+
+      function showView(key) {
+        Object.keys(VIEWS).forEach(function (k) {
+          var el = document.getElementById(VIEWS[k]);
+          el.hidden = k !== key;
+        });
+        var active = document.getElementById(VIEWS[key]);
+        active.querySelectorAll(".card").forEach(replay);
+        window.scrollTo(0, 0);
+      }
+
+      window.addEventListener("hashchange", function () {
+        showView(currentKey());
+      });
+
+      document.querySelectorAll(".year").forEach(function (el) {
+        el.textContent = new Date().getFullYear();
+      });
+
+      showView(currentKey());
+    })();
   </script>
 </body>
 </html>

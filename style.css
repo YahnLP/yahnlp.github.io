@@ -37,6 +37,11 @@ body {
 }
 
 /* =============== */
+/*  Views          */
+/* =============== */
+.view[hidden]{ display: none !important; }
+
+/* =============== */
 /*  Header         */
 /* =============== */
 .header{
@@ -61,6 +66,7 @@ body {
   background: rgba(255,255,255,0.06);
   border: 1px solid rgba(255,255,255,0.12);
   box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+  flex-shrink: 0;
 }
 
 .titles h1{
@@ -73,6 +79,49 @@ body {
   margin: 6px 0 0;
   opacity: 0.80;
   font-size: 14px;
+}
+
+/* Bouton retour (au-dessus du brand, dans les vues secondaires) */
+.back{
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  max-width: 980px;
+  margin: 0 auto 18px;
+  padding: 9px 14px 9px 10px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.12);
+  color: #cfe2ff;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+  width: fit-content;
+  transition: background 180ms ease, border-color 180ms ease, transform 180ms ease;
+}
+
+.back__arrow{
+  font-size: 15px;
+  transition: transform 180ms ease;
+}
+
+.back:hover{
+  background: rgba(255,255,255,0.10);
+  border-color: rgba(255,255,255,0.22);
+}
+
+.back:hover .back__arrow{
+  transform: translateX(-3px);
+}
+
+/* le conteneur du bouton retour est lui-même centré comme .brand */
+#view-bts .header, #view-ciel .header{
+  display: flex;
+  flex-direction: column;
+}
+
+#view-bts .back, #view-ciel .back{
+  align-self: center;
 }
 
 /* =============== */
@@ -91,8 +140,18 @@ body {
   margin-top: 18px;
 }
 
+.grid--3{
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
 @media (max-width: 820px){
   .grid{ grid-template-columns: 1fr; }
+  .grid--3{ grid-template-columns: 1fr; }
+}
+
+/* La vue d'accueil : cartes un peu plus hautes pour marquer les 2 grands choix */
+#view-home .card p{
+  min-height: 84px;
 }
 
 /* =============== */
@@ -114,6 +173,7 @@ body {
   animation: enter 650ms ease forwards;
 }
 
+.card:nth-child(1){ animation-delay: 20ms; }
 .card:nth-child(2){ animation-delay: 80ms; }
 .card:nth-child(3){ animation-delay: 140ms; }
 .card:nth-child(4){ animation-delay: 200ms; }
@@ -183,6 +243,7 @@ body {
   border-radius: 999px;
   background: rgba(255,255,255,0.08);
   border: 1px solid rgba(255,255,255,0.14);
+  white-space: nowrap;
 }
 
 .chip{
@@ -192,6 +253,7 @@ body {
   border-radius: 999px;
   background: rgba(255,255,255,0.05);
   border: 1px solid rgba(255,255,255,0.10);
+  text-align: right;
 }
 
 /* titres + texte */
@@ -258,6 +320,29 @@ body {
 }
 
 /* =============== */
+/* Lien secondaire */
+/* =============== */
+.more-link{
+  text-align: center;
+  margin: 22px 0 0;
+}
+
+.more-link a{
+  color: #cfe2ff;
+  opacity: 0.85;
+  font-size: 14px;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255,255,255,0.25);
+  padding-bottom: 2px;
+  transition: opacity 180ms ease, border-color 180ms ease;
+}
+
+.more-link a:hover{
+  opacity: 1;
+  border-color: rgba(255,255,255,0.55);
+}
+
+/* =============== */
 /* Footer          */
 /* =============== */
 .footer{
@@ -277,4 +362,5 @@ body {
   .card{ animation: none; opacity: 1; transform: none; }
   .card:hover{ transform: none; }
   .arrow{ transition: none; }
+  .back__arrow{ transition: none; }
 }
