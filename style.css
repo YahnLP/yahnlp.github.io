@@ -115,12 +115,12 @@ body {
 }
 
 /* le conteneur du bouton retour est lui-même centré comme .brand */
-#view-bts .header, #view-ciel .header{
+#view-bts .header, #view-bts1 .header, #view-bts2 .header, #view-ciel .header{
   display: flex;
   flex-direction: column;
 }
 
-#view-bts .back, #view-ciel .back{
+#view-bts .back, #view-bts1 .back, #view-bts2 .back, #view-ciel .back{
   align-self: center;
 }
 

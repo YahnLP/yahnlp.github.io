@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Portail Pédagogique — Yahn LE PRETTRE</title>
-  <meta name="description" content="Portail pédagogique – accès rapide au BTS SIO option SISR (blocs 1 à 3, maths, CEJMA, ateliers) et au BAC PRO CIEL." />
+  <meta name="description" content="Portail pédagogique – accès rapide au BTS SIO option SISR (1re et 2e année : blocs, maths, CEJMA, ateliers) et au BAC PRO CIEL." />
   <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -80,7 +80,7 @@
   </div>
 
   <!-- =============================== -->
-  <!--  VUE 2 : BTS SIO (5 blocs)      -->
+  <!--  VUE 2 : BTS SIO (choix année)  -->
   <!-- =============================== -->
   <div class="view" id="view-bts" hidden>
     <header class="header">
@@ -96,14 +96,80 @@
           </svg>
         </div>
         <div class="titles">
-          <h1>Portail BTS SIO – Option SISR</h1>
+          <h1>BTS SIO – Option SISR</h1>
+          <p>Choisissez votre année de formation</p>
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="grid grid--2" aria-label="Années BTS SIO SISR">
+
+        <a class="card card--blue" href="#bts1" data-view-link>
+          <div class="card__top">
+            <span class="tag">1re ANNÉE</span>
+            <span class="chip">Blocs 1 à 3 • Maths • CEJMA</span>
+          </div>
+          <h2>Première année</h2>
+          <p>
+            Support et services, infrastructure systèmes et réseaux, cybersécurité, maths et algorithmique, CEJMA et ateliers de professionnalisation.
+          </p>
+          <div class="card__bottom">
+            <span class="cta">Ouvrir la 1re année</span>
+            <span class="arrow" aria-hidden="true">→</span>
+          </div>
+        </a>
+
+        <a class="card card--violet" href="#bts2" data-view-link>
+          <div class="card__top">
+            <span class="tag">2e ANNÉE</span>
+            <span class="chip">Cybersécurité • E7</span>
+          </div>
+          <h2>Deuxième année</h2>
+          <p>
+            Cybersécurité en entreprise pour l’épreuve E7, puis maths, CEJMA et ateliers de 2e année, mis en ligne au fur et à mesure.
+          </p>
+          <div class="card__bottom">
+            <span class="cta">Ouvrir la 2e année</span>
+            <span class="arrow" aria-hidden="true">→</span>
+          </div>
+        </a>
+
+      </section>
+
+      <footer class="footer">
+        <span>© <span class="year"></span> – Portail BTS SIO SISR</span>
+        <span class="sep">•</span>
+        <span class="hint">Yahn LE PRETTRE</span>
+      </footer>
+    </main>
+  </div>
+
+  <!-- =============================== -->
+  <!--  VUE 2 : BTS SIO 1re année      -->
+  <!-- =============================== -->
+  <div class="view" id="view-bts1" hidden>
+    <header class="header">
+      <a class="back" href="#bts" data-view-link>
+        <span class="back__arrow" aria-hidden="true">←</span> Retour aux années
+      </a>
+      <div class="brand">
+        <div class="logo" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none">
+            <path d="M12 3.5a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z" stroke="currentColor" stroke-width="1.6"/>
+            <path d="M4.5 17a2.6 2.6 0 1 0 0 5.2A2.6 2.6 0 0 0 4.5 17Zm15 0a2.6 2.6 0 1 0 0 5.2A2.6 2.6 0 0 0 19.5 17Z" stroke="currentColor" stroke-width="1.6"/>
+            <path d="M12 9.8v2.3M12 12.1H6.2M12 12.1h5.8M6.2 12.1 4.7 17M17.8 12.1 19.3 17" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="titles">
+          <h1>BTS SIO SISR – 1re année</h1>
           <p>Accès rapide aux blocs de cours et aux ateliers</p>
         </div>
       </div>
     </header>
 
     <main class="container">
-      <section class="grid grid--2" aria-label="Blocs BTS SIO SISR">
+      <section class="grid grid--2" aria-label="Blocs BTS SIO SISR, 1re année">
 
         <!-- Bloc 1 -->
         <a class="card card--blue"
@@ -222,7 +288,7 @@
       </section>
 
       <footer class="footer">
-        <span>© <span class="year"></span> – Portail BTS SIO SISR</span>
+        <span>© <span class="year"></span> – BTS SIO SISR, 1re année</span>
         <span class="sep">•</span>
         <span class="hint">Yahn LE PRETTRE</span>
       </footer>
@@ -230,7 +296,109 @@
   </div>
 
   <!-- =============================== -->
-  <!--  VUE 3 : BAC PRO CIEL (années)  -->
+  <!--  VUE 3 : BTS SIO 2e année       -->
+  <!-- =============================== -->
+  <div class="view" id="view-bts2" hidden>
+    <header class="header">
+      <a class="back" href="#bts" data-view-link>
+        <span class="back__arrow" aria-hidden="true">←</span> Retour aux années
+      </a>
+      <div class="brand">
+        <div class="logo" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none">
+            <path d="M12 3.5a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z" stroke="currentColor" stroke-width="1.6"/>
+            <path d="M4.5 17a2.6 2.6 0 1 0 0 5.2A2.6 2.6 0 0 0 4.5 17Zm15 0a2.6 2.6 0 1 0 0 5.2A2.6 2.6 0 0 0 19.5 17Z" stroke="currentColor" stroke-width="1.6"/>
+            <path d="M12 9.8v2.3M12 12.1H6.2M12 12.1h5.8M6.2 12.1 4.7 17M17.8 12.1 19.3 17" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="titles">
+          <h1>BTS SIO SISR – 2e année</h1>
+          <p>Les contenus de 2e année sont mis en ligne au fur et à mesure</p>
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="grid grid--2" aria-label="Blocs BTS SIO SISR, 2e année">
+
+        <!-- Cybersécurité -->
+        <a class="card card--red"
+           href="https://yahnlp.github.io/bts2-sio-sisr-bloc3/"
+           target="_self" rel="noopener">
+          <div class="card__top">
+            <span class="tag">BLOC 3</span>
+            <span class="chip">Cybersécurité</span>
+          </div>
+          <h2>Cybersécurité</h2>
+          <p>
+            Analyse de risques, référentiels et PSSI, cadre juridique, zones réseau, annuaire sécurisé, 802.1X, reverse proxy, messagerie et DNS, durcissement — la suite jusqu’à l’épreuve blanche E7 arrive par phases.
+          </p>
+          <div class="card__bottom">
+            <span class="cta">Ouvrir le bloc</span>
+            <span class="arrow" aria-hidden="true">→</span>
+          </div>
+        </a>
+
+        <!-- Maths &amp; Algorithmique -->
+        <a class="card card--green card--disabled" aria-disabled="true" tabindex="-1">
+          <div class="card__top">
+            <span class="tag">MATHS</span>
+            <span class="chip">Mathématiques pour l’informatique</span>
+          </div>
+          <h2>Maths &amp; Algorithmique</h2>
+          <p>
+            Contenu de 2e année en préparation.
+          </p>
+          <div class="card__bottom">
+            <span class="cta">Bientôt disponible</span>
+            <span class="lock" aria-hidden="true">🔒</span>
+          </div>
+        </a>
+
+        <!-- CEJMA -->
+        <a class="card card--orange card--disabled" aria-disabled="true" tabindex="-1">
+          <div class="card__top">
+            <span class="tag">CEJMA</span>
+            <span class="chip">Éco • Juridique • Management</span>
+          </div>
+          <h2>CEJMA</h2>
+          <p>
+            Contenu de 2e année en préparation.
+          </p>
+          <div class="card__bottom">
+            <span class="cta">Bientôt disponible</span>
+            <span class="lock" aria-hidden="true">🔒</span>
+          </div>
+        </a>
+
+        <!-- Ateliers de professionnalisation -->
+        <a class="card card--teal card--disabled" aria-disabled="true" tabindex="-1">
+          <div class="card__top">
+            <span class="tag">ATELIERS</span>
+            <span class="chip">Portfolio • E5 • E6</span>
+          </div>
+          <h2>Ateliers de professionnalisation</h2>
+          <p>
+            Contenu de 2e année en préparation.
+          </p>
+          <div class="card__bottom">
+            <span class="cta">Bientôt disponible</span>
+            <span class="lock" aria-hidden="true">🔒</span>
+          </div>
+        </a>
+
+      </section>
+
+      <footer class="footer">
+        <span>© <span class="year"></span> – BTS SIO SISR, 2e année</span>
+        <span class="sep">•</span>
+        <span class="hint">Yahn LE PRETTRE</span>
+      </footer>
+    </main>
+  </div>
+
+  <!-- =============================== -->
+  <!--  VUE 4 : BAC PRO CIEL (années)  -->
   <!-- =============================== -->
   <div class="view" id="view-ciel" hidden>
     <header class="header">
@@ -330,7 +498,7 @@
 
   <script>
     (function () {
-      var VIEWS = { home: "view-home", bts: "view-bts", ciel: "view-ciel" };
+      var VIEWS = { home: "view-home", bts: "view-bts", bts1: "view-bts1", bts2: "view-bts2", ciel: "view-ciel" };
 
       function currentKey() {
         var h = (location.hash || "#home").replace("#", "");
